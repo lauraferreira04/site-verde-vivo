@@ -1,0 +1,244 @@
+body {
+  background-color: #f5f5f5; /* cinza claro */
+}
+
+h1 {
+  color: #f5f5f5; /* branco fraco */
+}
+
+h2 {
+  color: #000000; /* preto  */
+}
+
+.bg-retangulo {
+  position: relative;
+  background-image: url('../img/bg.jpg'); /* caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  color: white; /* texto em branco */
+  overflow: hidden;
+}
+
+/* Overlay semitransparente */
+.bg-retangulo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* preto com 40% de transparência */
+  z-index: 0;
+}
+
+/* Conteúdo acima do overlay */
+.bg-retangulo .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Frase de impacto */
+.frase-impacto {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 50px 0 30px 0;
+  color: #064420; /* verde escuro */
+}
+
+
+/* Frase de impacto */
+.titulo-quem-somos {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 50px 0 30px 0;
+  color: #f5f5f5; /* verde escuro */
+}
+
+/* Cards da seção */
+.secao-cards {
+  padding: 50px 0;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* Rodapé */
+footer {
+  background-color: #064420;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #28a745;
+}
+/* Linha do tempo */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #28a745; /* verde */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-step {
+  padding: 1rem 2rem;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-step.left {
+  left: 0;
+}
+
+.timeline-step.right {
+  left: 50%;
+}
+
+.timeline-step::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #28a745;
+  border: 4px solid white;
+  top: 1rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-step.right::after {
+  left: -10px;
+}
+
+.timeline-content {
+  padding: 1rem;
+  background-color: white;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-step.left .timeline-content {
+  margin-left: 1rem;
+}
+
+.timeline-step.right .timeline-content {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-step {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .timeline-step.right {
+    left: 0;
+  }
+  .timeline-step::after {
+    left: -10px;
+  }
+}
+
+/* Frase de impacto específica para Sobre */
+.frase-impacto-sobre {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 50px 0 30px 0;
+  color: #064420; /* verde escuro */
+}
+
+/* Accordion */
+.accordion {
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  padding: 1rem;
+  transition: background-color 0.3s;
+}
+
+.accordion:hover {
+  background-color: #d5f0d6;
+}
+
+.accordion.active {
+  background-color: #28a745;
+  color: white;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: white;
+  padding: 0 1rem;
+}
+
+.panel p {
+  margin: 1rem 0;
+}
+
+/* Dica aleatória */
+.random-dica {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.random-dica button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.random-dica button:hover {
+  background-color: #218838;
+}
+
+.dica-aleatoria {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #d5f0d6;
+  border-radius: 8px;
+  font-weight: bold;
+}

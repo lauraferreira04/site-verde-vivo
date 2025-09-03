@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerdeVivo</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="img/VerdeVivo.svg" alt="Logo VerdeVivo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        VerdeVivo
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link active" href="sobre.html">SOBRE</a></li>
+          <li class="nav-item"><a class="nav-link" href="dicas.html">DICAS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Retângulo/banner de fundo com overlay branco -->
+  <div class="bg-retangulo">
+    <div class="container">
+      <h1 class="titulo-quem-somos">Quem Somos</h1>
+      <p style="text-align:center; font-size:1.2rem;">
+        O site VerdeVivo é fictício e foi criado para compartilhar ideias e dicas de sustentabilidade, ajudando você a ter um estilo de vida mais consciente e ecológico.
+      </p>
+    </div>
+  </div>
+
+  <!-- Linha do tempo -->
+  <div class="timeline">
+    <div class="timeline-step left">
+      <div class="timeline-content">
+        <h3>Início da ideia</h3>
+        <p>O VerdeVivo começou como um projeto simples para inspirar pequenas mudanças na rotina diária.</p>
+      </div>
+    </div>
+    <div class="timeline-step right">
+      <div class="timeline-content">
+        <h3>Crescimento da comunidade</h3>
+        <p>A comunidade cresceu com pessoas engajadas, compartilhando dicas, histórias e ações sustentáveis.</p>
+      </div>
+    </div>
+    <div class="timeline-step left">
+      <div class="timeline-content">
+        <h3>Futuro verde</h3>
+        <p>Nosso objetivo é continuar expandindo e inspirar cada vez mais pessoas a viver de forma sustentável.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Siga-nos nas redes sociais:</p>
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">Twitter</a>
+    <p>&copy; 2025 VerdeVivo</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS da linha do tempo -->
+  <script>
+    const timelineItems = document.querySelectorAll('.timeline-content');
+
+    function showTimelineItems() {
+      const triggerBottom = window.innerHeight * 0.85;
+      timelineItems.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        if(itemTop < triggerBottom) {
+          item.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', showTimelineItems);
+    window.addEventListener('load', showTimelineItems);
+  </script>
+
+</body>
+</html>

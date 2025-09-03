@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas - VerdeVivo</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS do site -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="img/logo.png" alt="Logo VerdeVivo" width="40" height="40" class="d-inline-block align-text-top me-2">
+        VerdeVivo
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">SOBRE</a></li>
+          <li class="nav-item"><a class="nav-link active" href="dicas.html">DICAS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Retângulo/banner de fundo -->
+  <div class="bg-retangulo">
+    <div class="container">
+      <h1 class="titulo-quem-somos">Dicas Sustentáveis</h1>
+      <p class="titulo-quem-somos">Aprenda pequenas ações que fazem grande diferença para o planeta!</p>
+    </div>
+  </div>
+
+  <!-- Seção de dicas -->
+  <div class="container my-5">
+    <div class="accordion">Como separar o lixo corretamente</div>
+    <div class="panel">
+      <p>Separe recicláveis, orgânicos e rejeitos. Lave os materiais recicláveis para evitar contaminação e siga as regras da coleta local.</p>
+    </div>
+
+    <div class="accordion">Como economizar água em casa</div>
+    <div class="panel">
+      <p>Feche a torneira ao escovar os dentes, conserte vazamentos, use baldes no lugar de mangueiras e aproveite água da chuva para limpeza.</p>
+    </div>
+
+    <div class="accordion">Alternativas de transporte sustentáveis</div>
+    <div class="panel">
+      <p>Prefira caminhar, usar bicicleta, transporte público ou caronas compartilhadas sempre que possível para reduzir emissão de poluentes.</p>
+    </div>
+
+    <div class="random-dica">
+      <button id="gerarDica">Gerar Dica Aleatória</button>
+      <div class="dica-aleatoria" id="dicaAleatoria"></div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="bg-success text-white text-center py-3">
+    <p>Siga-nos nas redes sociais:</p>
+    <a href="#" class="text-white mx-2">Facebook</a> |
+    <a href="#" class="text-white mx-2">Instagram</a> |
+    <a href="#" class="text-white mx-2">Twitter</a>
+    <p>&copy; 2025 VerdeVivo</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS do site -->
+  <script src="js/script.js"></script>
+</body>
+</html>
